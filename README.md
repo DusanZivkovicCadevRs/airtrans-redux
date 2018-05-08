@@ -9,5 +9,8 @@ https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 
 ### Summary
 Devide components into 
-* Representational _pure functional components_
-* Containers _pure class components_
+* Representational (_pure functional components, mostly how things look_)
+* Containers (_pure class components, mostly how things work_)
+
+All components should be made as representational, until some of them appear to be in need of state,
+lifecycles or main thing that they do is such that they only pass data to nested components.
