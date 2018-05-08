@@ -3,33 +3,30 @@ import React, { Component } from 'react'
 export default class Card extends Component {
 
   state = {
-    showMenu: false
+    displayMenu: false
   }
 
-  showMenuHandler = (e) => {
-    e.preventDefault()
-    this.setState(({showMenu}) => ({showMenu: !showMenu}))
-  }
+  showMenuToggle = (e) => { this.setState(({displayMenu}) => ({displayMenu: !displayMenu})) }
 
   render() {
     return (
       <div>
-        <button onClick={this.showMenuHandler}>
+        <button onClick={this.showMenuToggle}>
           Show menu
         </button>
-        {this.showMenu &&   
+        {this.state.displayMenu &&   
         <div>
-          <button>
+          <button onClick={this.showMenuToggle}>
             Show menu
           </button>
-          <button>
+          <button onClick={this.showMenuToggle}>
             Show menu
           </button>
-          <button>
+          <button onClick={this.showMenuToggle}>
             Show menu
           </button>
         </div>
-  }
+      }
      </div>
     );
   }
