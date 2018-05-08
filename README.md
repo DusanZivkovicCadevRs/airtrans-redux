@@ -14,3 +14,6 @@ Devide components into
 
 All components should be made as representational, until some of them appear to be in need of state,
 lifecycles or main thing that they do is such that they only pass data to nested components.
+
+### Atomic design
+http://bradfrost.com/blog/post/atomic-web-design/
